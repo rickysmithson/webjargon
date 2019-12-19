@@ -1,0 +1,30 @@
+.nav-wrapper {
+    background-color: #42a5f5; 
+    }
+
+.page-footer {
+    background-color: #42a5f5 ;
+}
+.home-header{
+    margin-top: 10vh;
+}
+
+.home-search{
+    margin-top: 10vh;
+}
+
+.sub_button{
+    margin-top: 10vh;
+}
+
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      

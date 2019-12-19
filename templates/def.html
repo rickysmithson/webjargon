@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    TEST
-</body>
-</html>
+  {% extends 'base.html'%} {% block content %}
+  <div class="row">
+  <div class="center-align">
+  <h2>Definitions</h2>
+  </div>
+  </div>
+   {% for categories in category %}
+  <div class="row ">
+    <div class="col s12 m8 offset-m2">
+      <div class="card white-grey darken-1">
+	  {% for definitions in defines %}
+        <div class="card-content black-text">
+		  <span class="card-title">{{definitions.def_name}}</span>
+          <p>{{definitions.def_descr}}</p>
+        </div>
+        <div class="card-action">
+          <a class="waves-effect waves-light btn light-blue"><i class="material-icons left">thumb_up</i>Like</a>
+          <a class="waves-effect waves-light btn red"><i class="material-icons left">thumb_down</i>Dislike</a>
+        </div>
+    {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
