@@ -17,13 +17,13 @@
                 
                     <li><a href="{{url_for('get_home')}}">Home</a></li>
                     <li><a href="{{url_for('get_defin')}}">Definitions</a></li>
-                    <li><a href="{{url_for('get_defin')}}">Add Jargon</a></li>
+                    <li><a href="{{url_for('add_jargon')}}">Add Jargon</a></li>
                     <li><a href="{{url_for('get_defin')}}">Manage Categories</a></li>
                  </ul>
                 <ul class="side-nav" id="mobile-demo">
                    <li><a href="{{url_for('get_home')}}">Home</a></li>
                     <li><a href="{{url_for('get_defin')}}">Definitions</a></li>
-                    <li><a href="{{url_for('get_defin')}}">Add Jargon</a></li>
+                    <li><a href="{{url_for('add_jargon')}}">Add Jargon</a></li>
                     <li><a href="{{url_for('get_defin')}}">Manage Categories</a></li>
                 </ul>
             </div>
@@ -48,8 +48,8 @@
                 <h5 class="white-text">Pages</h5>
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="{{url_for('get_home')}}">Home</a></li>
-                  <li><a class="grey-text text-lighten-3" href="{{url_for('get_home')}}">Definitions</a></li>
-                  <li><a class="grey-text text-lighten-3" href="{{url_for('get_home')}}">Add Jargon</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{url_for('get_defin')}}">Definitions</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{url_for('add_jargon')}}">Add Jargon</a></li>
                   <li><a class="grey-text text-lighten-3" href="{{url_for('get_home')}}">Manage Categories</a></li>
                 </ul>
               </div>
@@ -72,6 +72,7 @@
         $(document).ready(function() {
             $(".dropdown-trigger").dropdown();
             $('.collapsible').collapsible();
+            $('select').material_select();
             $(".button-collapse").sideNav();
         });
            </script>
