@@ -1,20 +1,17 @@
 {% extends 'base.html'%} {% block content %}
 <div class="row col s12 center-align home-header">
-    <h1>
-         Web Jargon Search  
-    </h1> 
+	<h1>
+		Web Jargon Search
+	</h1>
 </div>
-<div>   
-<form>
-    <div class="input-field home-search center-align">
-        <input placeholder="Enter Search Here" id="search" type="search" required>
-         <label class="label-icon" for="search"></label>
-         <i class="material-icons">close</i>
+<div>
+<form action="{{ url_for('search') }}" method="post">
+    <div class="center-align">
+    <input   placeholder="Enter Search Here" type="text" name="projectFilePath"><br>
+    </div>
+    <div class="center-align">
+    <input class="waves-effect waves-light btn light-blue" type="submit" value="Submit">
     </div>
 </form>
-</div>
- <div class="center-align sub_button ">
-     <a class="waves-effect waves-light btn light-blue"><i class="material-icons left">search</i>Search</a>
-  </button>
 </div>
 {% endblock %}

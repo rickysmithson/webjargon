@@ -16,7 +16,7 @@ def get_home():
 
 @app.route('/get_defin')
 def get_defin():
-    return render_template("def.html", 
+       return render_template("def.html", 
     defines=mongo.db.definitions.find())
     
 
@@ -30,8 +30,16 @@ def add_jargon():
 def insert_jargon():
     definitions =  mongo.db.definitions
     definitions.insert_one(request.form.to_dict())
-    return redirect(url_for('add_jargon'))
+    return render_template("insertjargon.html")  
 
+
+@app.route('/search',  methods=['GET', 'POST'])
+def search():
+    text = request.form["projectFilePath"]
+    return render_template("searchdef.html",
+    defines=mongo.db.definitions.find({'def_name': text}))
+
+    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

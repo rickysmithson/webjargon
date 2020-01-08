@@ -2,80 +2,80 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
 </head>
 
 <body>
-      <header>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{url_for('get_home')}}" class="brand-logo">Web Jargon</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                
-                    <li><a href="{{url_for('get_home')}}">Home</a></li>
-                    <li><a href="{{url_for('get_defin')}}">Definitions</a></li>
-                    <li><a href="{{url_for('add_jargon')}}">Add Jargon</a></li>
-                    <li><a href="{{url_for('get_defin')}}">Manage Categories</a></li>
-                 </ul>
-                <ul class="side-nav" id="mobile-demo">
-                   <li><a href="{{url_for('get_home')}}">Home</a></li>
-                    <li><a href="{{url_for('get_defin')}}">Definitions</a></li>
-                    <li><a href="{{url_for('add_jargon')}}">Add Jargon</a></li>
-                    <li><a href="{{url_for('get_defin')}}">Manage Categories</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>  
-   
-    
-    <div class="container">
-            {% block content %} {% endblock %}
-    </div>
- </main>
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a href="{{url_for('get_home')}}" class="brand-logo">Web Jargon</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
 
-       <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Web Jargon</h5>
-                <p class="grey-text text-lighten-4">The ultimate place for all web jargon queries!</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Pages</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="{{url_for('get_home')}}">Home</a></li>
-                  <li><a class="grey-text text-lighten-3" href="{{url_for('get_defin')}}">Definitions</a></li>
-                  <li><a class="grey-text text-lighten-3" href="{{url_for('add_jargon')}}">Add Jargon</a></li>
-                  <li><a class="grey-text text-lighten-3" href="{{url_for('get_home')}}">Manage Categories</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-             ©
-            <script type="text/JavaScript">
-                document.write(new Date().getFullYear());
+					<li><a href="{{url_for('get_home')}}">Home</a></li>
+					<li><a href="{{url_for('get_defin')}}">Definitions</a></li>
+					<li><a href="{{url_for('add_jargon')}}">Add Jargon</a></li>
+
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="{{url_for('get_home')}}">Home</a></li>
+					<li><a href="{{url_for('get_defin')}}">Definitions</a></li>
+					<li><a href="{{url_for('add_jargon')}}">Add Jargon</a></li>
+
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+
+
+		<div class="container">
+			{% block content %} {% endblock %}
+		</div>
+	</main>
+
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Web Jargon</h5>
+					<p class="grey-text text-lighten-4">The ultimate place for all web jargon queries!</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Pages</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="{{url_for('get_home')}}">Home</a></li>
+						<li><a class="grey-text text-lighten-3" href="{{url_for('get_defin')}}">Definitions</a></li>
+						<li><a class="grey-text text-lighten-3" href="{{url_for('add_jargon')}}">Add Jargon</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				©
+				<script type="text/JavaScript">
+					document.write(new Date().getFullYear());
             </script>
-            Web Jargon - Ricky Smithson
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script type="text/javascript">
-        $(document).ready(function() {
+				Web Jargon - Ricky Smithson
+				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
             $(".dropdown-trigger").dropdown();
             $('.collapsible').collapsible();
             $('select').material_select();
             $(".button-collapse").sideNav();
         });
-           </script>
+	</script>
 </body>
 
 
