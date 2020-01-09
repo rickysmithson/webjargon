@@ -4,7 +4,7 @@
 </div>
 
 <div class="row">
-	<form class="col s12">
+	<form action="{{ url_for('update_jargon', def_id=definitions._id) }}" method="POST" class="col s12">
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">assignment</i>
