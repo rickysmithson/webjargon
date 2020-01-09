@@ -12,12 +12,14 @@
 		<div class="card">
 
 			<div class="card-content">
-				<span class="card-title">{{definitions.def_name}}</span>
+				<span name="defname" class="card-title">{{definitions.def_name}}</span>
 				<p>{{definitions.def_descr}}</p>
 			</div>
 			<div class="card-action">
 				<a class="waves-effect waves-light btn light-blue"><i class="material-icons left">thumb_up</i>Like</a>
 				<a class="waves-effect waves-light btn red"><i class="material-icons left">thumb_down</i>Dislike</a>
+                <a href="{{url_for('edit_jargon', def_id=definitions._id)}}" class="waves-effect waves-light btn grey"><i class="material-icons right">create</i>Edit</a>
+				<a class="waves-effect waves-light btn grey"><i class="material-icons right">clear</i>Delete</a>
 			</div>
 
 		</div>

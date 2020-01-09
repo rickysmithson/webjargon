@@ -39,7 +39,13 @@ def search():
     return render_template("searchdef.html",
     defines=mongo.db.definitions.find({'def_name': text}))
 
+
+@app.route('/edit_jargon/<def_id>')
+def edit_jargon(def_id):
+    jargon = mongo.db.definitions.find_one({"_id": ObjectId(def_id)})
+    return render_template('editjargon.html', definitions=jargon)
     
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
