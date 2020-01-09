@@ -38,6 +38,7 @@ def search():
     text = request.form["projectFilePath"]
     return render_template("searchdef.html",
     defines=mongo.db.definitions.find({'def_name': text}))
+    
 
 
 @app.route('/edit_jargon/<def_id>')
@@ -45,6 +46,7 @@ def edit_jargon(def_id):
     jargon = mongo.db.definitions.find_one({"_id": ObjectId(def_id)})
     return render_template('editjargon.html', definitions=jargon)
     
+
 @app.route('/update_jargon/<def_id>', methods=['POST'])
 def update_jargon(def_id):
     jargon = mongo.db.definitions
@@ -55,6 +57,14 @@ def update_jargon(def_id):
     })
     return render_template("def.html", 
     defines=mongo.db.definitions.find())
+
+
+@app.route('/delete_jargon/<def_id>')
+def delete_jargon(def_id):
+    mongo.db.definitions.remove({"_id": ObjectId(def_id)}),
+    return render_template("def.html", 
+    defines=mongo.db.definitions.find())
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
