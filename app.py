@@ -16,7 +16,7 @@ def get_home():
 
 @app.route('/get_defin')
 def get_defin():
-       return render_template("def.html", 
+    return render_template("def.html", 
     defines=mongo.db.definitions.find())
     
 
@@ -52,8 +52,9 @@ def update_jargon(def_id):
     jargon = mongo.db.definitions
     jargon.update({"_id": ObjectId(def_id)},
     {
-        'def_name':request.form.get('def_name'),
-        'def_descr':request.form.get('def_descr')
+        "$set": {'def_name':request.form.get('def_name')},
+        "$set": {'def_descr':request.form.get('def_descr')}
+        
     })
     return render_template("def.html", 
     defines=mongo.db.definitions.find())
@@ -65,6 +66,22 @@ def delete_jargon(def_id):
     return render_template("def.html", 
     defines=mongo.db.definitions.find())
 
+
+@app.route('/like_jargon/<def_id>', methods=['GET', 'POST'])
+def like_jargon(def_id):
+    jargon = mongo.db.definitions
+    jargon.update({"_id": ObjectId(def_id)},
+    {"$inc": {"def_like": 1}})
+    return render_template("def.html", 
+    defines=mongo.db.definitions.find())
+
+@app.route('/dislike_jargon/<def_id>', methods=['GET', 'POST'])
+def dislike_jargon(def_id):
+    jargon = mongo.db.definitions
+    jargon.update({"_id": ObjectId(def_id)},
+    {"$inc": {"def_dislike": 1}})
+    return render_template("def.html", 
+    defines=mongo.db.definitions.find())
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
