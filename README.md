@@ -1,65 +1,148 @@
-Your Project's Name
-One or two paragraphs providing an overview of your project.
+Web Development Jargon
 
-Essentially, this part is your sales pitch.
+Intoduction
 
-UX
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+The Web Development Jargon Site has been designed to allow users to find details about web jargon in order to get a better understanding of the domain.
+The project also allows users to share jargon that is not featured on the site and add the jargon for future reference by other users.
+Also Included on the site is a rating funstion allowing users to like and dislike jargon defintions.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+Included is an esay navigation bar which allows clear and user friendly navaigation accross the site and also in corperates the use of a search page which allows users
+to search for a particular term that they do not understand. The site is aimed at people who either have an understadning of web development but want to have a refresh on what certain terms mean
+and also thoose who wish to share their own knowledge which others by adding new terms.
 
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+User Experience
+
+The main purpose of the website is to provide users with a better understanding of the terms used in and around the web development domain imorving users knowledge allowing them to become more engaged in the world of web development.
+The website can also be used by experienced web developers who wish to share their knowledge of terms they find will be useful.
+
+User 1 (New To Web Development) 
+	User 1 would like to gain more of an understanding of terms that are used in and around the web development domain. In order to achieve the goal the user will be able to scroll though the clear and functional defintions page,
+	this will allow the user to see certain terms that are 'buzz' words in and around the world of web developers, and allow the user to get a better understanding of these and leave feedback based on the information using the like and dislike functionality.
+
+User 2 (Web Developer)
+	User 2 would like to refresh their knowledge on a few certain terms to ensure they have the correct understanding. To do this the site has included a clever search page which allows users to search on certain terms.
+	this woul dbe really helpful for the user just trying to refresh there knowledge of a term they may not have full understanding of.
+
+User 3 (Experienced Web Developer)
+	User 3 would like to be able to share their knowledge of web development with the wider public. The has a great function to allows the user to achieve this, they can add their own terms and defintions they feel are reveleant to the site. But users can also
+	amend previous records, if a user feels these are not correct they have the ability to edit the record to a more suitable level or remove the record from the site completely.
 
 Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+Navigation Bar
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+	A clear and concise navigation element has been created allowing easy browsing of the site.
 
-Features Left to Implement
-Another feature idea
+Search Bar
+
+	An easy to use search bar which allows users to search the site for terms as required 
+	
+Cards 
+
+	A clear and concise way to display seperate definitions, each ahve their own card.
+	
+Add Jargon 
+
+	A clear and easy to use input form which allows users to add to the terms avaible on the site.
+	
+Edit button
+
+	Allows users to edit records that are currently on the site.
+	
+Delete Button
+
+	Allows users to delete records that are not suitable for the domain.
+	
+Like Button	
+
+	Allows users to share their postive feedback about the term.
+	
+Dislike Button
+	
+	Allows users to share their negative feedback about the term.
+
+Like Badge
+
+	Allows users to see other users feedback on the current term.
+	
+Dislike Badge
+
+	Allows users to see other users feedback on the current term.
+
+Footer 
+
+	Allows users to see details about the site and further navigation links.
+
+
+Additional features to be implemented in the future:
+
+Allow users to categorize each term.
+
 Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-JQuery
-The project uses JQuery to simplify DOM manipulation.
+HTML - Used as the main basis code for the site.
+
+Python - Used as the scripting lanuage for site functionality.
+
+Flask - Used to speed up the web development process.
+
+MongoDB - Used as the database storage for the project.
+
+Materialize - Used as a design tool for the site.
+
 Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-Contact form:
-Go to the "Contact Us" page
+Search form:
+Go to the "Home" page
 Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
 Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+Navigation Bar:
+Open Up site
+Does the Navigation bar display as expected.
+Do the links go to the correct page.
+does the nav bar collapse based on screen size.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+Add Jargon:
+
+Go to the "Home" page
+Try to submit the empty form and verify that an error message about the required fields appears
+Try to submit the form with all inputs valid and verify that a success message appears.
+Does new record appear in list.
+
+Definitions:
+
+does page load correctly
+do all definitions in the collection show.
+do each definition load as individual cards
+are all buttons visible
+
+Edit Button:
+Click edit button
+does this take you to edit page
+do value pre populate based on record selected
+
+Delete Button:
+
+Click delete button
+does record remove from page
+does record remove from collection
+
+Like Button
+
+Click Like button
+does this add +1 to like value
+does badge update with count
+
+dislike Button
+
+Click disLike button
+does this add +1 to dislike value
+does badge update with count
+
 
 Deployment
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+The Project has been deployed to Git Hub for use as a code version control tool
+Project has been deployed to Heroku.
 
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
-Credits
-Content
-The text for section Y was copied from the Wikipedia article Z
-Media
-The photos used in this site were obtained from ...
-Acknowledgements
-I received inspiration for this project from X
