@@ -144,5 +144,5 @@ does badge update with count
 Deployment
 
 The Project has been deployed to Git Hub for use as a code version control tool
-Project has been deployed to Heroku.
+https://web-jargon.herokuapp.com/ deployed to Heroku
 
